@@ -28,3 +28,32 @@
 1. optimal value funciton & optimal policy 的含义
 
 对于有限马尔可夫决策过程(MDP), 值函数的作用是用于评价状态的回报"Return"，存在一中策略"policy"，使每一个状态的值函数都比其他的大(>=)，这一策略就是*optimal policy* ，而获取该策略，通过的是 *greddy value function*，取每一个状态的贪婪值函数，获取当前最大的回报（由于马尔可夫性质，因此取当前最大即可）
+
+
+
+## WEEK3 练习题
+
+```latex
+A policy is a function which maps ____ to ____.
+Actions to probability distributions over values.
+States to actions.
+States to probability distributions over actions.
+Actions to probabilities.
+States to values.
+```
+
+> policy是策略，策略是将状态映射到动作的“函数”，其建立的是一种映射关系；但是这种映射关系分为两种，第一种是 *determinstic* ，也就是说是一种确定性的映射关系，将一种状态映射为一个确定的动作；但是如果动作的维度很多，有可能并不是将状态映射到动作，而是将其映射到一种"概率分布"，也就是动作的概率分布，在这种情况下，进行动作的选取。
+
+```
+Does adding a constant to all rewards change the set of optimal policies in episodic tasks?
+Yes, adding a constant to all rewards changes the set of optimal policies.
+No, as long as the relative differences between rewards remain the same, the set of optimal policies is the same.
+```
+
+> 上面一个问题讲的是策略的问题，而针对强化学习任务本身，其本身分为 *continuous task* 和 *episodic task*，对于 *episodic task* 来说，其时间步长是一定的；
+>
+> 首先要明确，策略是怎么获取的？—— *optimal policy* 的获取是从 *optimal value funciton* 中获得：
+
+> 以下内容总结自《Introduction to RL》3.6章节：
+
+:togo: 完成关于 *optimal policy* 和 *optimal function* 的相关总结和课后习题。
